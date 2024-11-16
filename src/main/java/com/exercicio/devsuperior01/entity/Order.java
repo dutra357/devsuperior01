@@ -8,11 +8,11 @@ import java.util.Objects;
 public class Order {
 
     private Integer code;
-    private Double basic;
-    private Double discount;
+    private double basic;
+    private double discount;
 
     public Order() {}
-    public Order(Integer code, Double basic, Double discount) {
+    public Order(Integer code, double basic, double discount) {
         this.code = code;
         this.basic = basic;
         this.discount = discount;
@@ -26,19 +26,19 @@ public class Order {
         this.code = code;
     }
 
-    public Double getBasic() {
+    public double getBasic() {
         return basic;
     }
 
-    public void setBasic(Double basic) {
+    public void setBasic(double basic) {
         this.basic = basic;
     }
 
-    public Double getDiscount() {
+    public double getDiscount() {
         return discount;
     }
 
-    public void setDiscount(Double discount) {
+    public void setDiscount(double discount) {
         this.discount = discount;
     }
 

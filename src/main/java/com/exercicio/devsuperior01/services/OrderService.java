@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class OrderService {
 
-    public Double total (Order order) {
+    public double total (Order order) {
         return 0.0;
     }
 }
