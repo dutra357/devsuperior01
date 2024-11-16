@@ -6,6 +6,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.text.DecimalFormat;
+import java.util.Locale;
 import java.util.Scanner;
 
 @SpringBootApplication
@@ -36,9 +38,12 @@ public class Devsuperior01Application implements CommandLineRunner {
 		Order order = new Order(code, base, discount);
 		System.out.println();
 
+		var total = orderService.total(order);
+		DecimalFormat formater = new DecimalFormat("#.00");
+
 		System.out.println("---------------------------------");
 		System.out.println("Código do pedido: " + order.getCode());
-		System.out.println("Total: " + orderService.total(order));
+		System.out.println("Total: " + formater.format(total));
 		System.out.println("---------------------------------");
 	}
 }

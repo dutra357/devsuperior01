@@ -12,7 +12,7 @@ public class OrderService {
     }
 
     public double total (Order order) {
-        var discount = (order.getDiscount() > 0) ? (1 - order.getDiscount()/100) : 1;
+        var discount = (order.getDiscount() > 0.0) ? (1.0 - order.getDiscount()/100) : 1.0;
 
         return (order.getBasic() * discount) + shippingService.shipment(order);
     }
