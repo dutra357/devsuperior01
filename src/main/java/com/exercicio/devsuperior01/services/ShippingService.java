@@ -8,7 +8,7 @@ public class ShippingService {
 
     public double shipment (Order order) {
         double base = order.getBasic();
-        if (base < 100) {
+        if (base < 100.0) {
             return 20.0;
         } else if (base >= 100.0 && base <= 200.0) {
             return 12.00;

@@ -1,18 +1,15 @@
 package com.exercicio.devsuperior01.entity;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-
 import java.util.Objects;
 
-@EntityScan
 public class Order {
 
     private Integer code;
-    private double basic;
-    private double discount;
+    private Double basic;
+    private Double discount;
 
     public Order() {}
-    public Order(Integer code, double basic, double discount) {
+    public Order(Integer code, Double basic, Double discount) {
         this.code = code;
         this.basic = basic;
         this.discount = discount;
@@ -26,19 +23,19 @@ public class Order {
         this.code = code;
     }
 
-    public double getBasic() {
+    public Double getBasic() {
         return basic;
     }
 
-    public void setBasic(double basic) {
+    public void setBasic(Double basic) {
         this.basic = basic;
     }
 
-    public double getDiscount() {
+    public Double getDiscount() {
         return discount;
     }
 
-    public void setDiscount(double discount) {
+    public void setDiscount(Double discount) {
         this.discount = discount;
     }
 
